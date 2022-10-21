@@ -128,7 +128,7 @@ export PATH_TO_FX=/opt/javafx-sdk-18.0.2/lib
 eval "$(rbenv init -)"
 
 #Proper aliasing for dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='$HOME/go/bin/lazygit --git-dir=$HOME/.cfg --work-tree=$HOME'
 alias vim='/usr/bin/nvim'
 alias discord='/usr/bin/Discord/Discord --enable-features=UseOzonePlatform --ozone-platform=wayland'
 alias lg='lazygit'
