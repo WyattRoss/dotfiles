@@ -130,7 +130,7 @@ eval "$(rbenv init -)"
 #Proper aliasing for dotfiles
 alias config='$HOME/go/bin/lazygit --git-dir=$HOME/.cfg --work-tree=$HOME'
 alias vim='/usr/bin/nvim'
-alias discord='/usr/bin/Discord/Discord --enable-features=UseOzonePlatform --ozone-platform=wayland'
+#alias discord='/usr/bin/Discord/Discord'
 alias lg='lazygit'
 
 #tmux
