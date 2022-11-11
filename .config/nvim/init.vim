@@ -30,6 +30,7 @@ set colorcolumn=90
 set termguicolors
 
 call plug#begin('~/.vim/plugged')
+Plug 'terrortylor/nvim-comment'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'simrat39/rust-tools.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -227,10 +228,11 @@ local opts = {
                 -- enable clippy on save
                 checkOnSave = {
                     command = "clippy"
-                },
+               },
             }
         }
     },
 }
 require('rust-tools').setup(opts)
+require('nvim_comment').setup()
 EOF
