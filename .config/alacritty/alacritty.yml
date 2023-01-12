@@ -64,3 +64,7 @@ schemes:
       white:   '0xacb0d0'
 
 colors: *tokyo-night
+
+font:
+  normal:
+    family: JetBrainsMono
