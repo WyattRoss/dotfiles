@@ -140,6 +140,11 @@ _G.packer_plugins = {
     path = "/home/wross/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-comment"] = {
+    loaded = true,
+    path = "/home/wross/.local/share/nvim/site/pack/packer/start/nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/wross/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -180,27 +185,32 @@ _G.packer_plugins = {
     path = "/home/wross/.local/share/nvim/site/pack/packer/start/vim-floaterm",
     url = "https://github.com/voldikss/vim-floaterm"
   },
-  ["vim-gitbranch"] = {
-    loaded = true,
-    path = "/home/wross/.local/share/nvim/site/pack/packer/start/vim-gitbranch",
-    url = "https://github.com/itchyny/vim-gitbranch"
-  },
   vimwiki = {
-    config = { "\27LJ\2\n›\1\0\0\3\0\4\0\a6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0K\0\1\0\1\0\4\21template_default\17def_template\tpath\14~/vimwiki\18template_path\24~/vimwiki_templates\17template_ext\n.html\17vimwiki_list\6g\bvim\0" },
+    config = { "\27LJ\2\n›\1\0\0\3\0\4\0\a6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0K\0\1\0\1\0\4\21template_default\17def_template\tpath\14~/vimwiki\17template_ext\n.html\18template_path\24~/vimwiki_templates\17vimwiki_list\6g\bvim\0" },
     loaded = true,
     path = "/home/wross/.local/share/nvim/site/pack/packer/start/vimwiki",
     url = "https://github.com/vimwiki/vimwiki"
+  },
+  ["zen-mode.nvim"] = {
+    config = { "\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rzen-mode\frequire\0" },
+    loaded = true,
+    path = "/home/wross/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
+    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: zen-mode.nvim
+time([[Config for zen-mode.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rzen-mode\frequire\0", "config", "zen-mode.nvim")
+time([[Config for zen-mode.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
 -- Config for: vimwiki
 time([[Config for vimwiki]], true)
-try_loadstring("\27LJ\2\n›\1\0\0\3\0\4\0\a6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0K\0\1\0\1\0\4\21template_default\17def_template\tpath\14~/vimwiki\18template_path\24~/vimwiki_templates\17template_ext\n.html\17vimwiki_list\6g\bvim\0", "config", "vimwiki")
+try_loadstring("\27LJ\2\n›\1\0\0\3\0\4\0\a6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0K\0\1\0\1\0\4\21template_default\17def_template\tpath\14~/vimwiki\17template_ext\n.html\18template_path\24~/vimwiki_templates\17vimwiki_list\6g\bvim\0", "config", "vimwiki")
 time([[Config for vimwiki]], false)
 
 _G._packer.inside_compile = false

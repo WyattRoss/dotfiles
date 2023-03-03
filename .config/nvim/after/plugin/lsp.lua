@@ -4,7 +4,7 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
 	'rust_analyzer',
-	'sumneko_lua',
+	'lua_ls',
 })
 
 local cmp = require('cmp')
