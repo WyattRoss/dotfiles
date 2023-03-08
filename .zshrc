@@ -77,7 +77,6 @@ plugins=(
     zsh-syntax-highlighting
     copyfile
     copypath 
-    vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -125,8 +124,6 @@ export PATH=$PATH:/home/wross/go/bin
 export PATH=$PATH:/home/wross/.cargo/bin
 export PATH=$PATH:/home/wross/.local/bin
 export PATH=$PATH: PATH="$HOME/.rbenv/bin:$PATH"
-export PATH_TO_FX=/opt/javafx-sdk-18.0.2/lib
-export VI_MODE_SET_CURSOR=true
 eval "$(rbenv init -)"
 
 #Proper aliasing for dotfiles
