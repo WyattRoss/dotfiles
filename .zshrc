@@ -117,20 +117,27 @@ source $ZSH/oh-my-zsh.sh
 #environment variables
 export USBHOME=/run/media/wross
 
-#Adding shit to the PATH
+#Adding stuff to the PATH
 export PATH=$PATH:/usr/bin/idea-IC-221.5787.30/bin
 export PATH=$PATH:/home/wross/bin
 export PATH=$PATH:/home/wross/go/bin
 export PATH=$PATH:/home/wross/.cargo/bin
 export PATH=$PATH:/home/wross/.local/bin
 export PATH=$PATH: PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+
+
+#Eza
+alias ls='eza --long --header -F --git --color always'
+alias tree='eza --tree --color always'
 
 #Proper aliasing for dotfiles
-alias config='$HOME/go/bin/lazygit --git-dir=$HOME/.cfg --work-tree=$HOME'
+alias config='lazygit --git-dir=$HOME/.cfg --work-tree=$HOME'
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias vim='/usr/bin/nvim'
 alias lg='lazygit'
 
 #tmux
+# if [ "$TMUX" = "" ]; then exec tmux; fi
 if [ "$TMUX" = "" ]; then tmux; fi
+
+source ~/.salsarc
