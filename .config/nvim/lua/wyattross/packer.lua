@@ -19,6 +19,8 @@ return require('packer').startup(function(use)
 
     use "savq/melange-nvim"
 
+    use 'WhoIsSethDaniel/lualine-lsp-progress.nvim'
+
 	use('nvim-treesitter/playground')
 
     use('nvim-lualine/lualine.nvim')
@@ -63,9 +65,6 @@ return require('packer').startup(function(use)
         "folke/zen-mode.nvim",
         config = function()
             require("zen-mode").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
             }
         end
     }
