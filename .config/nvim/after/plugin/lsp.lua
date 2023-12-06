@@ -31,5 +31,10 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 
-
 lsp.setup()
+
+cmp.setup({
+  mapping = {
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+  }
+})

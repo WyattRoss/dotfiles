@@ -127,7 +127,7 @@ export PATH=$PATH: PATH="$HOME/.rbenv/bin:$PATH"
 
 
 #Eza
-alias ls='eza --long --header -F --git --color always'
+alias ls='eza --long --header -F --git --color always --time-style iso'
 alias tree='eza --tree --color always'
 
 #Proper aliasing for dotfiles

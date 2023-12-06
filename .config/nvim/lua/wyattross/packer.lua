@@ -7,42 +7,35 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.0',
-		-- or                            , branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.4',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
 	use "EdenEast/nightfox.nvim"
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
+    use "savq/melange-nvim"
+
 	use('nvim-treesitter/playground')
 
-	use{
-        'vimwiki/vimwiki',
-        config = function()
-            vim.g.vimwiki_list = 
-		{
-                {
-                    ['path'] = '~/vimwiki',
-                    ['template_path'] = '~/vimwiki_templates',
-                    ['template_default'] = 'def_template',
-                    ['template_ext'] = '.html'
-                }
-		}
-        end
-    }
+    use('nvim-lualine/lualine.nvim')
 
 	use('mbbill/undotree')
 
 	use('voldikss/vim-floaterm')
 
+    use 'nvim-tree/nvim-web-devicons'
+
+    use 'prichrd/netrw.nvim'
+
 	use {
 		"windwp/nvim-autopairs",
 		config = function() require("nvim-autopairs").setup {} end
 	}
-	
+
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		requires = {
