@@ -13,21 +13,29 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-	use "EdenEast/nightfox.nvim"
+	use {
+        "EdenEast/nightfox.nvim",
+        config = function ()
+            vim.cmd([[colorscheme carbonfox]])
+        end
+    }
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
     use "savq/melange-nvim"
 
-    use 'WhoIsSethDaniel/lualine-lsp-progress.nvim'
+    use {
+        'WhoIsSethDaniel/lualine-lsp-progress.nvim',
+        event = 'VimEnter',
+    }
 
 	use('nvim-treesitter/playground')
 
     use('nvim-lualine/lualine.nvim')
 
-	use('mbbill/undotree')
+    use('mbbill/undotree')
 
-	use('voldikss/vim-floaterm')
+    use "numToStr/FTerm.nvim"
 
     use 'nvim-tree/nvim-web-devicons'
 
