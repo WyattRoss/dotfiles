@@ -1,1 +1,1 @@
-require("wyattross")
+require("config")
