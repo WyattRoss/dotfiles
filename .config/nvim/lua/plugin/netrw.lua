@@ -1,6 +1,7 @@
 return {
     "prichrd/netrw.nvim",
-    init = function()
+    dependencies = {"nvim-tree/nvim-web-devicons"},
+    config = function()
         return {
             require'netrw'.setup{
                 use_devicons = true

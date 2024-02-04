@@ -1,6 +1,10 @@
 return {
     'nvim-treesitter/nvim-treesitter',
-    init = function ()
-        run = ':TSUpdate'
+    config = function ()
+        local treesitter = require("nvim-treesitter.configs")
+        treesitter.setup({
+            auto_install =  true,
+            highlight = { enable = true },
+        })
     end
 }

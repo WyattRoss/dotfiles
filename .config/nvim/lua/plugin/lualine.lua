@@ -1,7 +1,6 @@
-return { 
+return {
     'nvim-lualine/lualine.nvim',
     dependencies = { 'WhoIsSethDaniel/lualine-lsp-progress.nvim' },
-    event = "VeryLazy",
     opts = function(_, opts)
         return {
             require('lualine').setup {
@@ -36,8 +35,6 @@ return {
                     lualine_b = {},
                     lualine_c = {'filename'},
                     lualine_x = {'location'},
-                    lualine_y = {},
-                    lualine_z = {}
                 },
                 tabline = {},
                 winbar = {},

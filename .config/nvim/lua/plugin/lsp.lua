@@ -1,18 +1,10 @@
 return {
     'VonHeikemen/lsp-zero.nvim',
     event = "VeryLazy",
-    cmd = 'Mason',
     branch = 'v2.x',
     dependencies = {
         { 'neovim/nvim-lspconfig' },
-        {
-            'williamboman/mason.nvim',
-            build = function()
-                pcall(vim.cmd, 'MasonUpdate')
-            end
-        },
-        { 'williamboman/mason-lspconfig.nvim', },
-
+        {'williamboman/mason.nvim'},
         { 'hrsh7th/nvim-cmp' },
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'L3MON4D3/LuaSnip' },
@@ -21,9 +13,7 @@ return {
     config = function()
 
         local lsp = require('lsp-zero')
-
         lsp.preset('recommended')
-
         lsp.on_attach(function(client, bufnr)
             lsp.default_keymaps({buffer = bufnr})
         end)
@@ -44,6 +34,7 @@ return {
         vim.keymap.set("n", "<leader>vca", vim.lsp.buf.code_action, opts)
         vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
         vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
+        vim.keymap.set('n', '<leader>cc', vim.cmd.cclose)
 
         local cmp = require('cmp')
         local cmp_select = {behavior = cmp.SelectBehavior.Select}
