@@ -28,3 +28,5 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "120"
 
 vim.opt.shortmess = "I"
+
+vim.opt.showmode = false

@@ -11,10 +11,11 @@ return {
     },
     {
         "hrsh7th/nvim-cmp",
+        event = "VeryLazy",
         config = function()
             local cmp = require("cmp")
-            local cmp_select = {behavior = cmp.SelectBehavior.Select}
             require("luasnip.loaders.from_vscode").lazy_load()
+            local luasnip = require("luasnip")
 
             cmp.setup({
                 snippet = {
@@ -23,7 +24,6 @@ return {
                     end,
                 },
                 window = {
-                    completion = cmp.config.window.bordered(),
                     documentation = cmp.config.window.bordered(),
                 },
                 mapping = {
@@ -38,7 +38,7 @@ return {
                         else
                             fallback()
                         end
-                        end, {"i", "s"}),
+                    end, {"i", "s"}),
 
                     ["<S-Tab>"] = cmp.mapping(function(fallback)
                         if cmp.visible() then
@@ -48,12 +48,12 @@ return {
                         else
                             fallback()
                         end
-                        end, {"i", "s"}),
+                    end, {"i", "s"}),
                 },
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
                     { name = "luasnip" }, -- For luasnip users.
-                }, {
+                    }, {
                         { name = "buffer" },
                     }),
             })
