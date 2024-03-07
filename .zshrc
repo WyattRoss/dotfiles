@@ -32,10 +32,11 @@ alias config='lazygit --git-dir=$HOME/.cfg --work-tree=$HOME'
 alias cfg='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias vim='/usr/bin/nvim'
 alias lg='lazygit'
+alias cl='clear'
 
 #tmux
 # if [ "$TMUX" = "" ]; then exec tmux; fi
-if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TMUX"  = ""  -a "$DESKTOP_SESSION" = "plasma" ]; then tmux; fi
 
 PATH="/home/wross/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/wross/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
