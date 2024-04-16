@@ -8,6 +8,11 @@ return {
         lazy = false,
     },
     {
+        'mrcjkb/rustaceanvim',
+        version = '^4', -- Recommended
+        ft = { 'rust' },
+    },
+    {
         "neovim/nvim-lspconfig",
         event = "VeryLazy",
         config = function()
@@ -17,6 +22,10 @@ return {
                 function (server_name) -- default handler (optional)
                     require("lspconfig")[server_name].setup {}
                 end,
+
+                ["rust_analyzer"] = function ()
+                    -- do nothing
+                end
             }
 
             vim.keymap.set("n", "gd", vim.lsp.buf.definition)
