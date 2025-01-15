@@ -5,9 +5,9 @@ ZSH_THEME="candy"
 plugins=(
     git
     sudo 
-    zsh-syntax-highlighting
     copyfile
     copypath 
+    zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

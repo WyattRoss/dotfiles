@@ -17,8 +17,9 @@ return {
             { silent = true, desc = "evaluate visual selection" })
         -- if you work with html outputs:
         vim.keymap.set("n", "<leader>mx", ":MoltenOpenInBrowser<CR>", { desc = "open output in browser", silent = true })
+        vim.keymap.set("n", "<leader>os", ":noautocmd MoltenEnterOutput<CR>",
+            { silent = true, desc = "show/enter output" })
 
-        vim.g.magma_automatically_open_output = false
-        vim.g.magma_image_provider = "ueberzugpp"
+        vim.g.molten_image_provider = "image.nvim"
     end,
 }

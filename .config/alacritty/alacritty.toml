@@ -84,3 +84,8 @@ TERM = "xterm-256color"
 [font.normal]
 family = "mononoki"
 
+[terminal]
+
+[terminal.shell]
+program = "/bin/zsh"
+args = ["-l"]
