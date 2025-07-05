@@ -1,5 +1,9 @@
+
 return {
     "windwp/nvim-autopairs",
     event = "VeryLazy",
-    config = function() require("nvim-autopairs").setup {} end
+    config = function()
+        local autopairs = require("nvim-autopairs")
+        autopairs.setup({})
+    end
 }

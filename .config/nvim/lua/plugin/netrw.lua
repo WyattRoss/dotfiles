@@ -8,5 +8,6 @@ return {
                 ['yp']  = function(payload) vim.fn.setreg('"', payload.dir) end,
             },
         }
+        vim.g.netrw_liststyle = 3
     end
 }
